@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Signika:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Inter:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,11 +20,11 @@
 
   <header>
     <nav id="navPc">
-      <a href="index.html">
+      <a class="menu" href="index.html">
         <div class="home">Home</div>
       </a>
-      <a href="statistic.html">
-        <div>Estatisticas</div>
+      <a class="menu" href="statistic.html">
+        <div>Curiosidades</div>
       </a>
     </nav>
 
@@ -31,11 +33,11 @@
         <img src="images/menu.png" alt="menu">
       </div>
       <ul>
-        <a href="index.html">
+        <a class="menu" href="index.html">
           <li class="home">Home</li>
         </a>
-        <a href="statistic.html">
-          <li>Estatisticas</li>
+        <a class="menu" href="statistic.html">
+          <li>Curiosidades</li>
         </a>
       </ul>
     </nav>
@@ -49,43 +51,50 @@
 
       <div class="search">
 
-        <label>Encontre a ficha técnica do seu Pokémon favorito:</label>
+        <label class="ficha">Encontre a ficha técnica do seu Pokémon favorito:</label>
         <input type="text" id="namePokemon" placeholder="Enter name Pokemon">
-        
-        <select id="sortBy" class="options">
-          <option value="chosenType">Tipo</option>
-          <option value="grass">grass</option>
-          <option value="poison">poison</option>
-          <option value="fire">fire</option>
-          <option value="flying">flying</option>
-          <option value="water">water</option>
-          <option value="bug">bug</option>
-          <option value="normal">normal</option>
-          <option value="electric">electric</option>
-          <option value="ground">ground</option>
-          <option value="fighting">fighting</option>
-          <option value="psychic">psychic</option>
-          <option value="rock">rock</option>
-          <option value="ice">ice</option>
-          <option value="ghost">ghost</option>
-          <option value="dragon">dragon</option>
-          <option value="fairy">fairy</option>
-          <option value="dark">dark</option>
-          <option value="steel">steel</option>
-        </select>
 
-        <select id="orderBy" class="options">
-          <option value="a-z">A-Z</option>
-          <option value="z-a">Z-A</option>
-        </select>
+        <div class="content-options">
+          <select id="sortBy" class="options">
+            <option value="chosenType">Tipo</option>
+            <option value="grass">grass</option>
+            <option value="poison">poison</option>
+            <option value="fire">fire</option>
+            <option value="flying">flying</option>
+            <option value="water">water</option>
+            <option value="bug">bug</option>
+            <option value="normal">normal</option>
+            <option value="electric">electric</option>
+            <option value="ground">ground</option>
+            <option value="fighting">fighting</option>
+            <option value="psychic">psychic</option>
+            <option value="rock">rock</option>
+            <option value="ice">ice</option>
+            <option value="ghost">ghost</option>
+            <option value="dragon">dragon</option>
+            <option value="fairy">fairy</option>
+            <option value="dark">dark</option>
+            <option value="steel">steel</option>
+          </select>
 
-        <button id="submit" class="btn">Pesquisar</button>
+          <select id="orderBy" class="options">
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
+            <option value="asc">Pokédex ASC</option>
+            <option value="desc">Pokédex DESC</option>
+          </select>
+        </div>
+        <button id="submit" class="btn textsearch">Pesquisar</button>
 
       </div>
 
     </section>
 
-    <section id="pokemons" class="cardsPokemon"></section>
+    <section id="pokemons" class="cardsPokemon">
+
+    </section>
+
+
 
   </main>
 
