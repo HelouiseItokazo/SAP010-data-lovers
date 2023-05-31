@@ -56,7 +56,7 @@ function showImagePokemonAndName(pokemon, tagImg, tagP) {
 const styleCard = (pokemon, stylesPokemon) => {
 
   for (const data in pokemon) {
-
+    
     Object.defineProperty(pokemon[data], 'imgType', { value: [] });
     Object.defineProperty(pokemon[data], 'colorType', { value: [] });
 
