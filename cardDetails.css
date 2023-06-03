@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 10px;
+}
+
+.display-flex-align-center-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.cardDetails {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 250px 260px;
+  height: 510px;
+  width: 300px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.border {
+  border-radius: 24px;
+}
+
+.container,
+.container-details {
+  width: 100%;
+}
+
+.container-details{
+  padding: 10px;
+}
+
+.img-details{
+  margin-bottom: 28px;
+}
+
+.letter-card {
+  color: var(--whiteTone);
+  font-family: 'Carter One';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.container {
+  grid-area: 1 / 1 / span 1 / span 1;
+  height: 250px;
+}
+
+.container-details {
+  display: flex;
+  justify-content: start;
+  background-color: #F7F1E3;
+  grid-area: 2 / 1 / span 1 / span 1;
+  height: 330px;
+  margin-bottom: 50px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
+  width: max-content;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li::before {
+  background-color: #34ACE0;
+  bottom: -6px;
+  content: '';
+  height: 2px;
+  position: absolute;
+  transition: 0.3s all ease-in-out;
+  width: 0;
+}
+
+ul li:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+ul li:hover {
+  color: #84817A;
+}
+
+.letter-details {
+  color: #84817A;
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.gap {
+  gap: 15px;
+}
+
+img {
+  height: 130px;
+  width: 130px;
+  z-index: +1
+}
+
+.type {
+  border-radius: 63px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  height: max-content;
+  padding: 5px;
+  width: 60px;
+}
+
+table {
+  margin: 15px;
+}
+
+tr,
+th,
+td {
+  padding: 5px;
+}
+
+.subtitles {
+  color: rgba(132, 129, 122, 0.61);
+}
+
+th,
+td {
+  text-align: left;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.stats {
+  border-radius: 20px;
+  height: 3px;
+}
+
+.red {
+  background-color: #FF5252;
+}
+
+.green {
+  background-color: #33D9B2;
+}
+
+.arrow {
+  height: 15px;
+  width: 15px;
+}
+
+.container-evolurion {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.img-evolution {
+  height: 85px;
+  width: 85px;
+}
+
+.name-evolution::first-letter {
+  text-transform: uppercase;
+}
+
+.title-next-evolutions {
+  margin-top: 15px;
+}
+
+.grass {
+  background-color: #67ad27;
+}
+
+.poison {
+  background-color: #b667cf;
+}
+
+.fire {
+  background-color: #ff9741;
+}
+
+.flying {
+  background-color: #89aae3;
+}
+
+.water {
+  background-color: #4398d8;
+}
+
+.bug {
+  background-color: #91c91d;
+}
+
+.normal {
+  background-color: #919aa2;
+}
+
+.electric {
+  background-color: #fbd200;
+}
+
+.ground {
+  background-color: #e97333;
+}
+
+.fighting {
+  background-color: #e12c6a;
+}
+
+.psychic {
+  background-color: #fd6a78;
+}
+
+.rock {
+  background-color: #cbba8c;
+}
+
+.ice{
+  background-color: #4cd1c1;
+}
+
+.ghost{
+  background-color: #4c6ab2;
+}
+
+.dragon{
+  background-color: #006fc9;
+}
+
+.fairy {
+  background-color: #fb8aec;
+}
+
+.dark{
+  background-color: #625a64;
+}
+
+.steel{
+  background-color: #5A8FA3;
+}
