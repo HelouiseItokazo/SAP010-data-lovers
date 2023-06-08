@@ -42,7 +42,7 @@ const buildCard = (pokemons) => {
   const toKnowMore = pokemonsHtml.querySelectorAll("a p");
 
   toKnowMore.forEach(anchor => {
-    anchor.addEventListener('click', (event)=> {
+    anchor.addEventListener('click', (event) => {
       localStorage.setItem('id', event.target.id)
     })
   })
@@ -82,24 +82,26 @@ if (name) {
 
 }//endIf
 
-const searchType = document.getElementById("submit");
 
-if (searchType) {
+const selects = document.querySelectorAll(".content-options select");
 
-  searchType.addEventListener("click", () => {
+if (selects) {
+  selects.forEach(select => {
 
-    name.value = "";
-    document.getElementById("pokemons").innerHTML = "";
+    select.addEventListener("change", () => {
 
-    const sortBy = document.getElementById("sortBy").value;
-    const orderBy = document.getElementById("orderBy").value;
-    const pokemons = sortData(data.pokemon, sortBy, orderBy);
+      name.value = "";
+      document.getElementById("pokemons").innerHTML = "";
 
-    buildCard(pokemons);
+      const sortBy = document.getElementById("sortBy").value;
+      const orderBy = document.getElementById("orderBy").value;
 
-  });//endAddEventListener
+      const pokemons = sortData(data.pokemon, sortBy, orderBy);
+      buildCard(pokemons);
 
-}//endIf
+    })
+  })
+}
 
 const heaviestPokemonImage = document.getElementById("snorlax");
 const heaviestPokemonName = document.getElementById("nameRevealedSnorlax");
@@ -121,7 +123,7 @@ const tallestPokemonName = document.getElementById("nameRevealedPolitoed");
 
 if (tallestPokemonImage) {
 
-  tallestPokemonImage.addEventListener("click", () => {
+  tallestPokemonImage.addEventListener('click', () => {
 
     const pokemon = computeStats.findTheBiggestPokemonSizes(data.pokemon, 'height');
 
@@ -131,44 +133,31 @@ if (tallestPokemonImage) {
 
 }//endIf
 
-window.addEventListener("load", () => {
-
-  buildCard(data.pokemon);
-
+window.addEventListener('load', () => {
+  if(window.location.pathname == '/'){
+    buildCard(data.pokemon);
+    const menuHome = document.getElementById('home');
+    menuHome.style.color = '#00478C';
+  }
 });//endAddEventListener
 
-document.querySelectorAll("header .home").forEach(
-  item => {
-    item.addEventListener("click", () => {
-      return window.location = "./";
-    })
+const hamburgerMenu = document.querySelector('#burger');
 
-  }
-)
+if(hamburgerMenu){
+  hamburgerMenu.addEventListener('click', () => {
 
-const menuMob = document.getElementById("menuMob");
+    const itensMenuMobile = document.querySelector('.itens-menu-mobile');
 
-if (menuMob) {
-  menuMob.addEventListener("click", () => {
-    const menu = document.querySelector("#navCel");
-    menu.classList.toggle("active");
+    if (itensMenuMobile.style.display == 'block') {
+      itensMenuMobile.style.display = 'none';
+    } else {
+      itensMenuMobile.style.display = 'block';
+    }
+
   })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if(window.location.pathname == '/statistic'){
+  const menuDiscovery = document.getElementById('discovery');
+  menuDiscovery.style.color = '#00478C';
+}
